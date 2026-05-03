@@ -2,6 +2,7 @@
 Problema 1 - Triángulo de Pascal y Evaluación de Polinomio (x+1)^n
 Unidad Curricular: Lenguajes y Compiladores - UNEG
 Implementación: Python con memoria dinámica (listas dinámicas)
+Arnaldo Perdomo CI: 30.791.551
 """
 
 import time
