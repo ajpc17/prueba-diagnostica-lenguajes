@@ -2,6 +2,7 @@
 Problema 2 - Validador de notacion FEN (Forsyth-Edwards Notation)
 Curso: Lenguajes y Compiladores - UNEG
 Implementacion: Python
+Arnaldo Perdomo CI: 30.791.551
 """
 
 # ================================================================
