@@ -220,9 +220,14 @@ void medir_y_guardar_n100(double tiempo_python_ms) {
     printf("=======================================================\n");
     printf("  Tiempo C      : %.6f ms\n", tiempo_ms);
     printf("  Tiempo Python : %.6f ms\n", tiempo_python_ms);
-    if (tiempo_python_ms > 0)
+    if (tiempo_python_ms > 0.0 && tiempo_ms > 0.0) {
         printf("  C es %.1fx mas rapido que Python\n",
                tiempo_python_ms / tiempo_ms);
+    } else if (tiempo_python_ms <= 0.0) {
+        printf("  Comparacion no disponible: tiempo Python igual a 0\n");
+    } else {
+        printf("  Comparacion no disponible: tiempo C igual a 0\n");
+    }
     printf("  Coeficientes generados: %d\n", n + 1);
 
     /* --- Escritura en archivo TXT --- */
@@ -239,9 +244,14 @@ void medir_y_guardar_n100(double tiempo_python_ms) {
     fprintf(archivo, "========================================\n");
     fprintf(archivo, "Tiempo de ejecucion C      : %.6f ms\n", tiempo_ms);
     fprintf(archivo, "Tiempo de ejecucion Python : %.6f ms\n", tiempo_python_ms);
-    if (tiempo_python_ms > 0)
+    if (tiempo_python_ms > 0.0 && tiempo_ms > 0.0) {
         fprintf(archivo, "C es %.1fx mas rapido que Python\n",
                 tiempo_python_ms / tiempo_ms);
+    } else if (tiempo_python_ms <= 0.0) {
+        fprintf(archivo, "Comparacion no disponible: tiempo Python igual a 0\n");
+    } else {
+        fprintf(archivo, "Comparacion no disponible: tiempo C igual a 0\n");
+    }
     fprintf(archivo, "\nCoeficientes de (x+1)^%d:\n", n);
     for (int i = 0; i <= n; i++) {
         fprintf(archivo, "  C(%3d) = %lld\n", i, coef[i]);
