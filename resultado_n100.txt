@@ -1,6 +1,6 @@
 Resultado para n=100
 ============================================================
-Tiempo de ejecución: 1.345100 ms
+Tiempo de ejecución: 1.412200 ms
 Número de coeficientes generados: 101
 
 Coeficientes (desde x^100 hasta x^0):
